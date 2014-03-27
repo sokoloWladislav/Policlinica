@@ -4,10 +4,15 @@ enum Symptoms{temperatura_H, temperatura_L, kashel, chikhaniye, rentgen, syp, kr
 
 public abstract class Illness{
 	public abstract Symptoms[] getSymptoms();
+	abstract public int getLength();
 }
 
 class Prostuda extends Illness{
-	private Symptoms[] s=new Symptoms[2];
+	private int length=2;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Prostuda(){
 	s[0]=Symptoms.temperatura_H;
 	s[1]=Symptoms.kashel;
@@ -18,7 +23,11 @@ class Prostuda extends Illness{
 }
 
 class Allergiya extends Illness{
-	private Symptoms[] s=new Symptoms[2];
+	private int length=2;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Allergiya(){
 		s[0]=Symptoms.syp;
 		s[1]=Symptoms.chikhaniye;
@@ -29,7 +38,11 @@ class Allergiya extends Illness{
 }
 
 class Diabet extends Illness{
-	private Symptoms[] s=new Symptoms[2];
+	private int length=2;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Diabet(){
 		s[0]=Symptoms.temperatura_L;
 		s[1]=Symptoms.krov_S;
@@ -40,7 +53,11 @@ class Diabet extends Illness{
 }
 
 class Vetryanka extends Illness{
-	private Symptoms[] s=new Symptoms[2];
+	private int length=2;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Vetryanka(){
 		s[0]=Symptoms.temperatura_H;
 		s[1]=Symptoms.syp;
@@ -51,7 +68,11 @@ class Vetryanka extends Illness{
 }
 
 class Pnevmoniya extends Illness{
-	private Symptoms[] s=new Symptoms[3];
+	private int length=3;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Pnevmoniya(){
 		s[0]=Symptoms.temperatura_H;
 		s[1]=Symptoms.kashel;
@@ -63,7 +84,11 @@ class Pnevmoniya extends Illness{
 }
 
 class Vich extends Illness{
-	private Symptoms[] s=new Symptoms[2];
+	private int length=2;
+	private Symptoms[] s=new Symptoms[length];
+	public int getLength(){
+		return length;
+	}
 	public Vich(){
 		s[0]=Symptoms.temperatura_L;
 		s[1]=Symptoms.krov_V;
